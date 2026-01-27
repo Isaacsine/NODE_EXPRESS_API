@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #3f4444;
+ }
+h1 {
+    color: #eeecec;
+    text-align: center;
+ }
+.container {
+    background-color: rgb(199, 193, 193);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+form {
+    margin-bottom: 20px;
+}
+input, button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+button {
+    background-color: #9391f1;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #2503e2;
+}
+.delete-btn {
+    background-color: #fa7f76;
+}
+.delete-btn:hover {
+    background-color: #da190b;
+}
+.user-list {
+    list-style-type: none;
+    padding: 0;
+}
+.user-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-info {
+    flex-grow: 1;
+}
+.error {
+    color: red;
+    margin-top: 10px;
+}
+@media (max-width: 600px) {
+    .user-item {
+        flex-direction: column;
+        align-items: flex-start;
+     }
+    button {
+        margin: 5px 0;
+    }
+}

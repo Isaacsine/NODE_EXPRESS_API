@@ -1,0 +1,19 @@
+{
+  "name": "node_express_api",
+  "version": "1.0.0",
+  "description": "my first project",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon index.js",
+    "dev":"nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
