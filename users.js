@@ -1,5 +1,5 @@
 import express from 'express';
-import { readUsers, writeUsers } from '../dataStore.js';
+import { readUsers, writeUsers } from './dataStore.js';
 
 const router = express.Router();
 
@@ -11,6 +11,16 @@ router.get('/', async (req, res) => {
 
 // CREATE user
 router.post('/', async (req, res) => {
+  const { firstName, lastName, age } = req.body;
+  
+  if (!firstName || !lastName || age === undefined) {
+    return res.status(400).json({ message: 'firstName, lastName, and age are required' });
+  }
+  
+  if (typeof age !== 'number' || age < 0 || age > 150) {
+    return res.status(400).json({ message: 'age must be a number between 0 and 150' });
+  }
+  
   const users = await readUsers();
   const newUser = { id: users.length + 1, ...req.body };
   users.push(newUser);
@@ -29,6 +39,16 @@ router.get('/:id', async (req, res) => {
 
 // UPDATE user
 router.put('/:id', async (req, res) => {
+  const { firstName, lastName, age } = req.body;
+  
+  if (!firstName || !lastName || age === undefined) {
+    return res.status(400).json({ message: 'firstName, lastName, and age are required' });
+  }
+  
+  if (typeof age !== 'number' || age < 0 || age > 150) {
+    return res.status(400).json({ message: 'age must be a number between 0 and 150' });
+  }
+  
   const users = await readUsers();
   const id = parseInt(req.params.id);
   const idx = users.findIndex((u) => u.id === id);
