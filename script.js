@@ -1,4 +1,5 @@
-const API_BASE = '/users';
+// Use environment variable or default to relative path
+const API_BASE = window.API_URL ? `${window.API_URL}/users` : '/users';
 const userList = document.getElementById('userList');
 const addUserForm = document.getElementById('addUserForm');
 const errorMessage = document.getElementById('errorMessage');

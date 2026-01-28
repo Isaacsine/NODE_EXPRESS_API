@@ -23,6 +23,15 @@
         <ul id="userList" class="user-list"></ul>
         <div id="errorMessage" class="error"></div>
     </div>
+    <script>
+        // Set API URL based on environment
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            window.API_URL = 'http://localhost:5000';
+        } else {
+            // Replace with your actual backend URL (e.g., Render, Railway)
+            window.API_URL = 'https://your-backend-url.onrender.com';
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

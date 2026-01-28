@@ -4,5 +4,11 @@
     "firstName": "Sinethemba",
     "lastName": "Nkosi",
     "age": 24
+  },
+  {
+    "id": 2,
+    "firstName": "Happy",
+    "lastName": "Newyear",
+    "age": 52
   }
 ]
